@@ -606,6 +606,9 @@ const ScientificCalculator = () => {
           </div>
         </div>
       </div>
+      <footer className="h-16 flex items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800 text-slate-400 text-sm mt-12 rounded-t-lg">
+        Developed by Pukkawit @ 2022 -{new Date().getFullYear()}
+      </footer>
     </div>
   );
 };
