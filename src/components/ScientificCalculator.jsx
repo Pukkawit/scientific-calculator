@@ -234,7 +234,7 @@ const ScientificCalculator = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 md:p-16 p-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
@@ -293,216 +293,215 @@ const ScientificCalculator = () => {
               </div>
 
               {/* Button Grid */}
-              <div className="grid grid-cols-6 gap-3">
-                {/* Row 1 - Functions */}
-                <Button
-                  onClick={clear}
-                  className="bg-red-600 hover:bg-red-700 text-white col-span-2"
-                >
-                  Clear
-                </Button>
-                <Button
-                  onClick={backspace}
-                  className="bg-orange-600 hover:bg-orange-700 text-white"
-                >
-                  ⌫
-                </Button>
-                <Button
-                  onClick={() => setIsRadians(!isRadians)}
-                  className="bg-blue-600 hover:bg-blue-700 text-white"
-                >
-                  {isRadians ? "RAD" : "DEG"}
-                </Button>
-                <Button
-                  onClick={() => performOperation("^")}
-                  className="bg-purple-600 hover:bg-purple-700 text-white"
-                >
-                  x^y
-                </Button>
-                <Button
-                  onClick={() => performOperation("÷")}
-                  className="bg-slate-600 hover:bg-slate-700 text-white"
-                >
-                  ÷
-                </Button>
-
-                {/* Row 2 - Scientific Functions */}
-                <Button
-                  onClick={() => scientificFunction("sin")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  sin
-                </Button>
-                <Button
-                  onClick={() => scientificFunction("cos")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  cos
-                </Button>
-                <Button
-                  onClick={() => scientificFunction("tan")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  tan
-                </Button>
-                <Button
-                  onClick={() => inputNumber("7")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  7
-                </Button>
-                <Button
-                  onClick={() => inputNumber("8")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  8
-                </Button>
-                <Button
-                  onClick={() => inputNumber("9")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  9
-                </Button>
-
-                {/* Row 3 */}
-                <Button
-                  onClick={() => scientificFunction("ln")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  ln
-                </Button>
-                <Button
-                  onClick={() => scientificFunction("log")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  log
-                </Button>
-                <Button
-                  onClick={() => scientificFunction("!")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  n!
-                </Button>
-                <Button
-                  onClick={() => inputNumber("4")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  4
-                </Button>
-                <Button
-                  onClick={() => inputNumber("5")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  5
-                </Button>
-                <Button
-                  onClick={() => inputNumber("6")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  6
-                </Button>
-
-                {/* Row 4 */}
-                <Button
-                  onClick={() => scientificFunction("√")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  √
-                </Button>
-                <Button
-                  onClick={() => scientificFunction("x²")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  x²
-                </Button>
-                <Button
-                  onClick={() => scientificFunction("1/x")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  1/x
-                </Button>
-                <Button
-                  onClick={() => inputNumber("1")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  1
-                </Button>
-                <Button
-                  onClick={() => inputNumber("2")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  2
-                </Button>
-                <Button
-                  onClick={() => inputNumber("3")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  3
-                </Button>
-
-                {/* Row 5 */}
-                <Button
-                  onClick={() => scientificFunction("π")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  π
-                </Button>
-                <Button
-                  onClick={() => scientificFunction("e")}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white"
-                >
-                  e
-                </Button>
-                <Button
-                  onClick={() => inputNumber("(")}
-                  className="bg-slate-600 hover:bg-slate-700 text-white"
-                >
-                  (
-                </Button>
-                <Button
-                  onClick={() => inputNumber(")")}
-                  className="bg-slate-600 hover:bg-slate-700 text-white"
-                >
-                  )
-                </Button>
-                <Button
-                  onClick={() => inputNumber("0")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  0
-                </Button>
-                <Button
-                  onClick={() => inputNumber(".")}
-                  className="bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  .
-                </Button>
-
-                {/* Row 6 - Operations */}
-                <Button
-                  onClick={() => performOperation("×")}
-                  className="bg-slate-600 hover:bg-slate-700 text-white"
-                >
-                  ×
-                </Button>
-                <Button
-                  onClick={() => performOperation("-")}
-                  className="bg-slate-600 hover:bg-slate-700 text-white"
-                >
-                  -
-                </Button>
-                <Button
-                  onClick={() => performOperation("+")}
-                  className="bg-slate-600 hover:bg-slate-700 text-white"
-                >
-                  +
-                </Button>
-                <Button
-                  onClick={calculate}
-                  className="bg-green-600 hover:bg-green-700 text-white col-span-3"
-                >
-                  =
-                </Button>
+              <div className="flex items-center gap-3">
+                <div className="w-1/2 grid grid-cols-3 gap-3">
+                  {/* Row 1 - Functions */}
+                  <Button
+                    onClick={clear}
+                    className="bg-red-600 hover:bg-red-700 text-white col-span-2"
+                  >
+                    Clear
+                  </Button>
+                  <Button
+                    onClick={backspace}
+                    className="bg-orange-600 hover:bg-orange-700 text-white"
+                  >
+                    ⌫
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("sin")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    sin
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("cos")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    cos
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("tan")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    tan
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("ln")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    ln
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("log")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    log
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("!")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    n!
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("√")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    √
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("x²")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    x²
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("1/x")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    1/x
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("π")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    π
+                  </Button>
+                  <Button
+                    onClick={() => scientificFunction("e")}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white"
+                  >
+                    e
+                  </Button>
+                  <Button
+                    onClick={() => inputNumber("(")}
+                    className="bg-slate-600 hover:bg-slate-700 text-white"
+                  >
+                    (
+                  </Button>
+                  <Button
+                    onClick={() => performOperation("×")}
+                    className="bg-slate-600 hover:bg-slate-700 text-white"
+                  >
+                    ×
+                  </Button>
+                  <Button
+                    onClick={() => performOperation("-")}
+                    className="bg-slate-600 hover:bg-slate-700 text-white"
+                  >
+                    -
+                  </Button>
+                  <Button
+                    onClick={() => performOperation("+")}
+                    className="bg-slate-600 hover:bg-slate-700 text-white"
+                  >
+                    +
+                  </Button>
+                </div>
+                <div className="w-1/2 grid grid-cols-3 gap-3">
+                  <Button
+                    onClick={() => setIsRadians(!isRadians)}
+                    className="bg-blue-600 hover:bg-blue-700 text-white"
+                  >
+                    {isRadians ? "RAD" : "DEG"}
+                  </Button>
+                  <Button
+                    onClick={() => performOperation("^")}
+                    className="bg-purple-600 hover:bg-purple-700 text-white"
+                  >
+                    x^y
+                  </Button>
+                  <Button
+                    onClick={() => performOperation("÷")}
+                    className="bg-slate-600 hover:bg-slate-700 text-white"
+                  >
+                    ÷
+                  </Button>
+                  {/* Row 2 - Scientific Functions */}
+                  <Button
+                    onClick={() => inputNumber("7")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    7
+                  </Button>
+                  <Button
+                    onClick={() => inputNumber("8")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    8
+                  </Button>
+                  <Button
+                    onClick={() => inputNumber("9")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    9
+                  </Button>
+                  {/* Row 3 */}
+                  <Button
+                    onClick={() => inputNumber("4")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    4
+                  </Button>
+                  <Button
+                    onClick={() => inputNumber("5")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    5
+                  </Button>
+                  <Button
+                    onClick={() => inputNumber("6")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    6
+                  </Button>
+                  {/* Row 4 */}
+                  <Button
+                    onClick={() => inputNumber("1")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    1
+                  </Button>
+                  <Button
+                    onClick={() => inputNumber("2")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    2
+                  </Button>
+                  <Button
+                    onClick={() => inputNumber("3")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    3
+                  </Button>
+                  {/* Row 5 */}
+                  <Button
+                    onClick={() => inputNumber(")")}
+                    className="bg-slate-600 hover:bg-slate-700 text-white"
+                  >
+                    )
+                  </Button>
+                  <Button
+                    onClick={() => inputNumber("0")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    0
+                  </Button>
+                  <Button
+                    onClick={() => inputNumber(".")}
+                    className="bg-slate-700 hover:bg-slate-600 text-white"
+                  >
+                    .
+                  </Button>
+                  {/* Row 6 - Operations */}
+                  <Button
+                    onClick={calculate}
+                    className="bg-green-600 hover:bg-green-700 text-white col-span-3 "
+                  >
+                    =
+                  </Button>
+                </div>
               </div>
 
               {/* Memory Functions */}
